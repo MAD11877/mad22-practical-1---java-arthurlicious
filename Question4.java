@@ -18,6 +18,21 @@ public class Question4
      */
      
     Scanner in = new Scanner(System.in);
+    System.out.print("Enter base of triangle : ");
+    int num = in.nextInt();
+    System.out.println("Base of Triangle : " + num);
+    // ROW 
+    for(int i = 1; i <= num; i++)
+    {
+        // THEN FOR EACH ROW I WANNA HAVE AN ASTERISK FOR EACH COL
+        for(int j = 1; j <= i; j++)
+        {
+          System.out.print("* ");
+        }
+          System.out.println(' ');
+    }
+
+
     
   }
 }

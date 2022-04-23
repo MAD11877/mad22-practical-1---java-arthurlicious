@@ -1,4 +1,10 @@
 import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Collections;
+ 
 
 public class Question5
 {
@@ -27,6 +33,50 @@ public class Question5
      */
      
     Scanner in = new Scanner(System.in);
+    System.out.print("Enter total integers to be entered : ");
+    int num = in.nextInt();
+
+    ArrayList<Integer> data = new ArrayList<>(); 
+    for(int i = 1; i <= num; ++i)
+    {
+        int alpha = in.nextInt();
+        data.add(alpha);
+    }
+
+    ArrayList<Integer> freq = new ArrayList<>();
+
+    Map<Integer, Integer> frequencyMap = new HashMap<>();
+    for (Integer i : data)
+    {
+      Integer count = frequencyMap.get(i);
+      if (count == null)
+      {
+        count = 0;
+      }
+      frequencyMap.put(i, count + 1);
+    }
     
+    // To store the result
+  
+
+ 
+    for (Map.Entry<Integer, Integer> entry: frequencyMap.entrySet())
+    {
+      System.out.println(entry.getKey() +": " + entry.getValue());
+      
+    }
+
+  // Using Collections.max() method returning max
+        // value in HashMap and storing in a integer
+        // variable
+    int maxValueInMap = (Collections.max(frequencyMap.values()));
+    System.out.println(maxValueInMap);
+    
+
+    // for(int i = 1; i <= data.size(); i++)
+    // {
+    //   System.out.println(data.get(i));
+    // }
+
   }
 }

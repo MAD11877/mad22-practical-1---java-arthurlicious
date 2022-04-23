@@ -11,6 +11,12 @@ public class Question3
      */
      
     Scanner in = new Scanner(System.in);
+    System.out.print("Enter integer : ");
+    int num = in.nextInt();
     
+    // Formula
+    int result = num * num;
+    System.out.print("Result : " + result);
+
   }
 }
