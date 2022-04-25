@@ -68,5 +68,7 @@ public class Question5
     // variable
     int maxValueInMap = (Collections.max(frequencyMap.entrySet(), Map.Entry.comparingByValue()).getKey());
     System.out.println(maxValueInMap);
+
+
   }
 }
