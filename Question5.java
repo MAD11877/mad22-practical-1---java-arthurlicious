@@ -57,26 +57,16 @@ public class Question5
     }
     
     // To store the result
-  
-
- 
     for (Map.Entry<Integer, Integer> entry: frequencyMap.entrySet())
     {
       System.out.println(entry.getKey() +": " + entry.getValue());
       
     }
 
-  // Using Collections.max() method returning max
-        // value in HashMap and storing in a integer
-        // variable
-    int maxValueInMap = (Collections.max(frequencyMap.values()));
+    // Using Collections.max() method returning max
+    // value in HashMap and storing in a integer
+    // variable
+    int maxValueInMap = (Collections.max(frequencyMap.entrySet(), Map.Entry.comparingByValue()).getKey());
     System.out.println(maxValueInMap);
-    
-
-    // for(int i = 1; i <= data.size(); i++)
-    // {
-    //   System.out.println(data.get(i));
-    // }
-
   }
 }
